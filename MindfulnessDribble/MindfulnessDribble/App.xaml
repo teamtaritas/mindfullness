@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MindfulnessDribble.App">
+    <Application.Resources>
+        <Color x:Key="LightCreamColor">#FEB28E</Color>
+        <Color x:Key="LightestCreamColor">#FEE8DD</Color>
+        <Color x:Key="LightOrangeColor">#FFCCB4</Color>
+        <Color x:Key="DarkPurpleColor">#4F3C75</Color>
+        <Color x:Key="LightPurpleColor">#E5E5E9</Color>
+        <Color x:Key="OrangishColor">#D05A34</Color>
+        <Color x:Key="BluishColor">#FFEED6</Color>
+        <Color x:Key="YellowishColor">#E69B46</Color>
+    </Application.Resources>
+</Application>

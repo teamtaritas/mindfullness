@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MindfulnessDribble.FirstPage"
+             xmlns:local="clr-namespace:MindfulnessDribble.Controller"
+             NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" 
+                     Orientation="Horizontal"
+                     Padding="15">
+            <Frame CornerRadius="100"
+                   IsClippedToBounds="True"
+                   HeightRequest="50"
+                   WidthRequest="50"
+                   Padding="0"
+                   >
+                <Image Source="saba.jpg"/>
+            </Frame>
+            <Label Text="Hi, Karen"
+                   TextColor="#4F3C75"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   Padding="10"/>
+            <Image Source="menu.png"
+                   HeightRequest="10"
+                   HorizontalOptions="EndAndExpand"
+                   Margin="10"/>
+        </StackLayout>
+        
+        <ScrollView Grid.Row="1" 
+                    Orientation="Horizontal"
+                    HorizontalScrollBarVisibility="Never">
+            <StackLayout Padding="5" 
+                         Orientation="Horizontal"
+                         Margin="5,0,0,0">
+                <Frame CornerRadius="20"
+                       Padding="5"
+                       x:Name="SleepFrame"
+                       Margin="5">
+                    <Label Text="Sleep" 
+                           TextColor="#4F3C75"
+                           FontSize="16"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           x:Name="SleepLabel"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SleepGesture"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame CornerRadius="20"
+                       Padding="5"
+                       x:Name="InnerFrame"
+                       Margin="5">
+                    <Label Text="Inner peace" 
+                           TextColor="#4F3C75"
+                           FontSize="16"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           x:Name="InnerLabel"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="InnerGesture"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame CornerRadius="20"
+                       Padding="5"
+                       x:Name="StressFrame"
+                       Margin="5">
+                    <Label Text="Stress" 
+                           TextColor="#4F3C75"
+                           FontSize="16"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           x:Name="StressLabel"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="StressGesture"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Frame CornerRadius="20"
+                       Padding="5"
+                       x:Name="AnxietyFrame"
+                       Margin="5">
+                    <Label Text="Anxiety" 
+                           TextColor="#4F3C75"
+                           FontSize="16"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           x:Name="AnxietyLabel"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AnxietyGesture"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Frame CornerRadius="20"
+                       Padding="5"
+                       x:Name="PeaceFrame"
+                       Margin="5">
+                    <Label Text="Peace" 
+                           TextColor="#4F3C75"
+                           FontSize="18"
+                           Padding="0"
+                           HorizontalOptions="Center"
+                           x:Name="PeaceLabel"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PeaceGesture"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <StackLayout Grid.Row="2"
+                     Padding="0"
+                     Margin="0">
+            <local:TabsController x:Name="InnerPeace"
+                                  Padding="0"
+                                  Margin="0"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

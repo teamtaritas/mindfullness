@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MindfulnessDribble.SecondPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms" xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <yummy:PancakeView Grid.Row="0"
+                           BackgroundColor="{StaticResource LightOrangeColor}"/>
+        <yummy:PancakeView Grid.Row="1"
+                           BackgroundColor="{StaticResource DarkPurpleColor}"/>
+        <Grid Grid.Row="0"
+              Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7.5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0"
+                         BackgroundColor="Transparent"
+                         Orientation="Horizontal"
+                         Padding="10,25,15,10">
+                <yummy:PancakeView Padding="6"
+                                   BackgroundColor="Transparent"
+                                   HorizontalOptions="Start">
+                    <Image Source="back.png"/>
+                    <yummy:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </yummy:PancakeView.GestureRecognizers>
+                </yummy:PancakeView>
+                <yummy:PancakeView Padding="2"
+                                   BackgroundColor="Transparent"
+                                   HorizontalOptions="EndAndExpand">
+                    <Image Source="search.png"/>
+                </yummy:PancakeView>
+            </StackLayout>
+            <yummy:PancakeView Grid.Row="1"
+                               BackgroundColor="White"
+                               CornerRadius="50"
+                               Padding="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0"
+                          VerticalOptions="Start"
+                          HorizontalOptions="Center"
+                          BackgroundColor="Transparent"
+                          Padding="50,50,50,20">
+                        <yummy:PancakeView BackgroundColor="#FFEED6"
+                                           CornerRadius="180"
+                                           Padding="-10">
+                            <Image Source="girlimage.png"/>
+                        </yummy:PancakeView>
+                    </Grid>
+                    <Grid Grid.Row="0"
+                          Padding="50,30,50,0"
+                          BackgroundColor="Transparent">
+                        <gauge:SfCircularGauge BackgroundColor="Transparent">
+                            <gauge:SfCircularGauge.Scales>
+                                <gauge:Scale StartAngle="270"
+                                             SweepAngle="360"
+                                             Direction="Clockwise"
+                                             RimColor="{StaticResource LightPurpleColor}"
+                                             RadiusFactor = "0.955"
+                                             RimThickness = "1"
+                                             ShowTicks="False"
+                                             ShowLabels="False">
+                                    <gauge:Scale.Pointers>
+                                        <gauge:MarkerPointer Value="30"
+                                                             MarkerShape = "Circle"
+                                                             Offset="0.991"
+                                                             Color="{StaticResource DarkPurpleColor}"
+                                                             EnableDragging="False"/>
+                                        <gauge:RangePointer RangeStart="0"
+                                                            Value="30"
+                                                            Offset="0.965"
+                                                            RangeCap="Both"
+                                                            Thickness="4"
+                                                            Color="{StaticResource DarkPurpleColor}"/>
+                                    </gauge:Scale.Pointers>
+                                </gauge:Scale>
+                            </gauge:SfCircularGauge.Scales>
+                        </gauge:SfCircularGauge>
+                    </Grid>
+                    <StackLayout Grid.Row="1"
+                                 Spacing="0"
+                                 BackgroundColor="Transparent"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+                        <Label Text="Inner Peace"
+                               TextColor="{StaticResource DarkPurpleColor}"
+                               FontSize="13"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Life Gratitude"
+                               TextColor="{StaticResource DarkPurpleColor}"
+                               FontSize="20"
+                               FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Grid Grid.Row="2"
+                          ColumnSpacing="0"
+                          Padding="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <yummy:PancakeView Grid.Column="0"
+                                           Padding="1"
+                                           Margin="100,20,0,20"
+                                           IsClippedToBounds="True"
+                                           BackgroundColor="Transparent">
+                            <Image Source="previous.png"/>
+                        </yummy:PancakeView>
+                        <yummy:PancakeView Grid.Column="1"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Padding="25" IsClippedToBounds="True"
+                                           Margin="0"
+                                           CornerRadius="180"
+                                           BackgroundColor="{StaticResource LightCreamColor}">
+                            <Image Source="pause.png"/>
+                        </yummy:PancakeView>
+                        <yummy:PancakeView Grid.Column="2"
+                                           Padding="1"
+                                           Margin="0,20,100,20"
+                                           IsClippedToBounds="True"
+                                           BackgroundColor="Transparent">
+                            <Image Source="next.png"/>
+                        </yummy:PancakeView>
+                    </Grid>
+                    <Grid Grid.Row="3"
+                          Padding="0"
+                          ColumnSpacing="0"
+                          BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <yummy:PancakeView Grid.Column="0"
+                                           Padding="0"
+                                           Margin="77,0,0,0"
+                                           BackgroundColor="Transparent"
+                                           IsClippedToBounds="True">
+                            <Image Source="volumedown.png"/>
+                        </yummy:PancakeView>
+                        <range:SfRangeSlider Grid.Column="1"
+                                             Orientation="Horizontal"
+                                             Margin="0"
+                                             ShowRange="False"
+                                             BackgroundColor="Transparent"
+                                             Minimum="0"
+                                             Maximum="9"
+                                             Value="3"
+                                             ThumbSize="0.7"
+                                             SnapsTo="None"
+                                             ToolTipPlacement="None"
+                                             TickFrequency="1"
+                                             TickPlacement="None"
+                                             TrackThickness="1"
+                                             TrackSelectionThickness="1"
+                                             KnobColor ="{StaticResource DarkPurpleColor}"
+                                             TrackColor ="{StaticResource LightPurpleColor}"
+                                             TrackSelectionColor="{StaticResource DarkPurpleColor}"/>
+                        <yummy:PancakeView Grid.Column="2"
+                                           Padding="0"
+                                           Margin="0,0,77,0"
+                                           BackgroundColor="Transparent"
+                                           IsClippedToBounds="True">
+                            <Image Source="volumeup.png"/>
+                        </yummy:PancakeView>
+                    </Grid>
+                </Grid>
+            </yummy:PancakeView>
+            <Grid Grid.Row="2"
+                  BackgroundColor="Transparent"
+                  Padding="20,15,20,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <yummy:PancakeView Grid.Column="0"
+                                   Padding="6"
+                                   Margin="25,0,25,0"
+                                   BackgroundColor="Transparent">
+                    <Image Source="heart.png"/>
+                </yummy:PancakeView>
+                <yummy:PancakeView Grid.Column="1"
+                                   Padding="6"
+                                   Margin="25,0,25,0"
+                                   BackgroundColor="Transparent">
+                    <Image Source="random.png"/>
+                </yummy:PancakeView>
+                <yummy:PancakeView Grid.Column="2"
+                                   Padding="6"
+                                   Margin="25,0,25,0"
+                                   BackgroundColor="Transparent">
+                    <Image Source="playlist.png"/>
+                </yummy:PancakeView>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

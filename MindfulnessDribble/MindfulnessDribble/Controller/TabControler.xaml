@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MindfulnessDribble.Controller.TabsController"
+             >
+    <ContentView.Content>
+        <ScrollView Grid.Row="2"
+                    Margin="0"
+                    Padding="0">
+            <Grid Padding="0"
+                  Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Calm HighLights-->
+                <Frame Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       HeightRequest="160"
+                       WidthRequest="350"
+                       BackgroundColor="#FFCCB4"
+                       HorizontalOptions="CenterAndExpand"
+                       CornerRadius="20"                     
+                       Margin="20,10,20,10"
+                       Padding="0"
+                       HasShadow="True">
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="0"
+                                 Margin="0">
+                        <Label Padding="10"
+                               TextColor="#4F3C75"
+                               FontSize="Medium"
+                               FontAttributes="Bold"
+                               Text="Calm Highlights"
+                               LineBreakMode="WordWrap"                      
+                               HorizontalOptions="StartAndExpand"
+                               WidthRequest="130"/>
+                        <Image Grid.Column="1"
+                               Source="calm.png"
+                               HorizontalOptions="EndAndExpand"
+                               HeightRequest="220"/>
+                    </StackLayout>
+                </Frame>
+                
+                <StackLayout Grid.Row="1" 
+                             Grid.Column="0"
+                             Margin="0"
+                             Padding="0">
+                    
+                    <!--Pieceful Thoughts-->
+                    <Frame HeightRequest="250"
+                           WidthRequest="150"
+                           BackgroundColor="#D5D7FF"
+                           HorizontalOptions="Start"
+                           CornerRadius="20"
+                           Padding="0"
+                           Margin="35,10,0,20"
+                           HasShadow="True">
+                        <Grid Margin="0"
+                              Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Padding="10"
+                                   TextColor="#4F3C75"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   Text="Pieceful Thoughts"
+                                   LineBreakMode="WordWrap"/>
+                            <Image Grid.Row="1"
+                                Source="piece.png"                                                                     
+                                   HorizontalOptions="End"
+                                   Margin="0,50,0,0"/>
+                        </Grid>
+                    </Frame>
+                    
+                    <!--Self Confidense-->
+                    <Frame HeightRequest="150"
+                           WidthRequest="150"
+                           BackgroundColor="#FFEFD7"
+                           HorizontalOptions="Start"
+                           CornerRadius="20"
+                           Padding="0"
+                           Margin="35,10,0,20"
+                           HasShadow="True">
+                        <StackLayout Margin="0"
+                                     Padding="0">
+                            <Label Padding="10,10,0,0"
+                                   TextColor="#4F3C75"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   Text="Self Confidense"
+                                   LineBreakMode="WordWrap"
+                                  />
+                            <Image Source="self.png"
+                                   HorizontalOptions="EndAndExpand"
+                                   HeightRequest="90"
+                                   Margin="0,20,0,0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1"
+                             Grid.Column="1"
+                             Padding="10">
+                    
+                    <!--Life Gratitude-->
+                    <Frame HeightRequest="150"
+                           WidthRequest="150"
+                           BackgroundColor="#FFEFD7"
+                           HorizontalOptions="Start"
+                           CornerRadius="20"
+                           Padding="0"
+                           Margin="10,10,10,30"
+                           HasShadow="True"
+                           >
+                        <StackLayout Margin="0"
+                                     Padding="0">
+                            <Label Padding="20,10,5,0"
+                                   TextColor="#4F3C75"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   Text="Life Gratitude"
+                                   LineBreakMode="WordWrap"
+                                   />
+                            <Image Source="life.png"
+                                   HorizontalOptions="EndAndExpand"
+                                   HeightRequest="90"
+                                   Margin="0,20,0,0"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LifeGratitude"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    
+                    <!--Love Yourself-->
+                    <Frame HeightRequest="250"
+                           WidthRequest="150"
+                           BackgroundColor="#FBE4E7"
+                           HorizontalOptions="Start"
+                           CornerRadius="20"
+                           Padding="0"
+                           Margin="10,10,10,30"
+                           HasShadow="True">
+                        <Grid Margin="0"
+                              Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Padding="10"
+                                   TextColor="#4F3C75"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   Text="Pieceful Thoughts"
+                                   LineBreakMode="WordWrap"/>
+                            <Image Grid.Row="1"
+                                   Source="love.png"                                                                     
+                                   HorizontalOptions="End"                                   
+                                   Margin="0,50,0,0"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>
